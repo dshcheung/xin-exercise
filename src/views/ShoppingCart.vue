@@ -24,11 +24,11 @@
             <td><input type="text" v-model="newItem.product"></td>
             <td><input type="number" v-model="newItem.cost"></td>
             <td><input type="number" v-model="newItem.quantity"></td>
-            <td><button class="createButton" v-on:click="addItem">Create</button></td>
+            <td><b-button :variant="'primary'" v-on:click="addItem">Create</b-button></td>
+            <td><strong>Total Price: ${{ grandTotal }}</strong></td>
           </tr>
         </tbody>
       </table>
-      <p>Total Price:  ${{ grandTotal }}</p>
     </div>
 
   </div>
@@ -41,16 +41,16 @@ export default {
     return {
       cartList: [
         {
-          product: 'fish', cost: 20, quantity: 5, subtotal: 100, 
+          product: 'fish', cost: 20, quantity: 5, subtotal: 100,
         },
         {
-          product: 'beef', cost: 20, quantity: 5, subtotal: 100, 
+          product: 'beef', cost: 20, quantity: 5, subtotal: 100,
         },
         {
-          product: 'apple', cost: 20, quantity: 5, subtotal: 100, 
+          product: 'apple', cost: 20, quantity: 5, subtotal: 100,
         },
         {
-          product: 'orange', cost: 20, quantity: 5, subtotal: 100, 
+          product: 'orange', cost: 20, quantity: 5, subtotal: 100,
         },
       ],
       newItem: {
