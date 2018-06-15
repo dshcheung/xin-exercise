@@ -1,7 +1,8 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import Home from './views/Home.vue';
-import About from './views/About.vue';
+import Todo from './views/Todo.vue';
+import ShoppingCart from './views/ShoppingCart.vue';
 
 Vue.use(Router);
 
@@ -13,9 +14,14 @@ export default new Router({
       component: Home,
     },
     {
-      path: '/about',
-      name: 'about',
-      component: About,
+      path: '/todo',
+      name: 'todo',
+      component: Todo,
+    },
+    {
+      path: '/shoppingCart',
+      name: 'shoppingCart',
+      component: ShoppingCart,
     },
   ],
 });
