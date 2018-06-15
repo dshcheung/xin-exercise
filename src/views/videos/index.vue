@@ -1,6 +1,10 @@
 <!-- 1) display a video grid/table/list -->
 <!-- 2) for each video, generate a link to the show page -->
 <!-- 3) also include title or other things to the link as params -->
+<!-- 4) beautify using vue-bootstrap -->
+
+<!-- https://bootstrap-vue.js.org/ -->
+<!-- https://router.vuejs.org/ -->
 <template>
   <div id="video-index">
     {{ videos }}
