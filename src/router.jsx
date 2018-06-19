@@ -27,10 +27,12 @@ export default new Router({
     },
     {
       path: '/videos',
+      name: 'videos',
       component: VideoIndex,
     },
     {
       path: '/videos/:id',
+      name: 'videoShow',
       component: VideoShow,
     },
   ],

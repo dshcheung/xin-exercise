@@ -9,3 +9,9 @@ export default {
   name: 'home',
 };
 </script>
+
+<style>
+  p {
+    margin-right: 300px;
+  }
+</style>
