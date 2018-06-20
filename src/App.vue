@@ -5,6 +5,7 @@
       <router-link to="/todo"> Todo </router-link> |
       <router-link to="/shoppingCart"> ShoppingCart </router-link> |
       <router-link to="/videos"> Videos </router-link>
+      <router-link to="/forums"> Community Forums </router-link>
     </div>
     <router-view></router-view>
   </div>
