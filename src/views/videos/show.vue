@@ -9,16 +9,23 @@
       <h2> {{ videoTitle }} </h2>
       <p class="vdescription"> {{ videoDescription }} </p>
     </div>
+
+    <video-index />
   </div>
 </template>
 
 <script>
+import VideoIndex from './index.vue';
+
 export default {
   name: "videoShow",
   data: function data() {
     return {
       id: this.$route.params.id,
     };
+  },
+  components: {
+    'video-index': VideoIndex,
   },
   computed: {
     videoURL: function videoURL() {
