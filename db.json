@@ -2,15 +2,92 @@
   "posts": [
     {
       "id": 1,
-      "title": "Post 1",
-      "content": "Post 1 Content"
+      "title": "Implementing Multiple Profiles for Dynamic Scaling of Neural NETWORK",
+      "author": "abusaadah",
+      "content": "\nI was trying to replicate the results in the paper titled \"Incomplete Dot Products for Dynamic Computation Scaling in Neural Network Inference\" using Tensorflow, but couldn't. After several emails to the authors, one of them had managed to reply and sent me the code, which was written in Chainer. All efforts to understand the code and convert it to Tensorflow or Keras proved abortive as I couldn't make sense out of many lines in the code. However, I managed to reproduce the first part of the results (Single Profile). My biggest challenge is how to implement the Multiple Profile. My research direction is heavily dependent on my ability to reproduce the results in the paper mentioned above. I will appreciate if you could help me because I have been in it for over five months and still couldn't figure out how to do it. Thank you. "
+    },
+    {
+      "content": "Hello Everyone,\n\n \n\nI am doing my Final Year Project (FYP) and today I updated my Gradle version on Android Studio to 3.1.0 and I am not sure how to solve this error: \"Configuration 'compile' is obsolete and has been replaced with 'implementation'.\nIt will be removed at the end of 2018\". \n\n \n\nI also have this application where my application \"Keeps Stopping\" when I run it. OVER AND OVER!!! Could you please help me? Anyone?",
+      "author": "SigmaDemon",
+      "title": "Android Studio 3.1.0 - Configuration 'compile' is obsolete and has been replaced wit 'implementation",
+      "id": 2
     }
   ],
   "comments": [
     {
-      "id": 1,
+      "content": "I am also facing the same issue from today after the new update:\n\nConfiguration 'compile' is obsolete and has been replaced with 'implementation'.\nIt will be removed at the end of 2018\n\n \n\nThe problem lies in the build.gradle file - apply plugin: 'com.google.gms.google-services'\n\nThe Google Services plugin is adding a dependency on behalf of you. Hopefully they fix it in the future.\n\nrajachellappan",
+      "title": "Same problem here",
+      "author": "rajachellappan",
+      "id": 1
+    },
+    {
+      "title": "hi",
+      "author": "hi",
+      "content": "hi",
+      "id": 2
+    },
+    {
+      "content": "\nhaving the same issues. And everytime I'm running the application no update is done. The IDE just installs previously compiled APK. I tried checking by changing many things but it lead to more errors and without errors also it is not making any changes when I run the app.",
+      "author": "Obeseman",
+      "title": "Same issue!",
+      "id": 3
+    },
+    {
+      "title": "12313",
+      "content": "421r1afsfd",
+      "id": 4
+    },
+    {
+      "title": "wrr",
+      "author": "dsgf",
+      "content": "sdgfdg",
+      "id": 5
+    },
+    {
+      "content": "I am also facing the same issue from today after the new update:\n\nConfiguration 'compile' is obsolete and has been replaced with 'implementation'.\nIt will be removed at the end of 2018\n\n \n\nThe problem lies in the build.gradle file - apply plugin: 'com.google.gms.google-services'\n\nThe Google Services plugin is adding a dependency on behalf of you. Hopefully they fix it in the future.\n\nrajachellappan",
+      "title": "Same problem here",
+      "author": "rajachellappan",
+      "id": 6
+    },
+    {
+      "content": "I am also facing the same issue from today after the new update:\n\nConfiguration 'compile' is obsolete and has been replaced with 'implementation'.\nIt will be removed at the end of 2018\n\n \n\nThe problem lies in the build.gradle file - apply plugin: 'com.google.gms.google-services'\n\nThe Google Services plugin is adding a dependency on behalf of you. Hopefully they fix it in the future.\n\nrajachellappan",
+      "title": "Same problem here",
+      "author": "rajachellappan",
+      "id": 7,
+      "postId": 1
+    },
+    {
+      "title": "lol",
+      "author": "lol",
+      "content": "LOL",
       "postId": 1,
-      "content": "Comment 1 for Post 1"
+      "id": 8
+    },
+    {
+      "content": "you suck",
+      "title": "you suck",
+      "author": "you suck",
+      "id": 9,
+      "postId": 1
+    },
+    {
+      "title": "safasf",
+      "author": "asdfsfsdf",
+      "content": "LOL",
+      "id": 10
+    },
+    {
+      "title": "Hi",
+      "author": "Hi",
+      "content": "Hi",
+      "id": 11
+    },
+    {
+      "title": "hello",
+      "author": "hello",
+      "content": "hello",
+      "id": 12,
+      "postId": 2
     }
   ]
 }

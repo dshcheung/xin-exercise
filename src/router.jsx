@@ -6,6 +6,11 @@ import VideoIndex from './views/videos/index.vue';
 import VideoShow from './views/videos/show.vue';
 import ShoppingCart from './views/ShoppingCart.vue';
 import ForumIndex from './views/forums/ForumIndex.vue';
+import ForumNew from './views/forums/ForumNew.vue';
+import ForumShowWrapper from './views/forums/ForumShowWrapper.vue';
+import ForumShow from './views/forums/ForumShow.vue';
+import ForumEdit from './views/forums/ForumEdit.vue';
+import CommentEdit from './views/forums/CommentEdit.vue';
 
 Vue.use(Router);
 
@@ -41,27 +46,32 @@ export default new Router({
       name: 'forumsIndex',
       component: ForumIndex,
     },
-    // {
-    //   path: '/forums/new',
-    //   name: 'forumsNew',
-    //   component: ForumNew,
-    // },
-    // {
-    //   path: '/forums/:id',
-    //   component: ForumShowWrapper,
-    //   children: [
-    //     {
-    //       path: '',
-    //       name: 'forumShow',
-    //       component: ForumShow,
-    //     },
-    //     {
-    //       path: 'edit',
-    //       name: 'forumEdit',
-    //       component: ForumEdit,
-    //     },
-    //   ],
-    // },
+    {
+      path: '/forums/new',
+      name: 'forumsNew',
+      component: ForumNew,
+    },
+    {
+      path: '/forums/:id',
+      component: ForumShowWrapper,
+      children: [
+        {
+          path: '',
+          name: 'forumShow',
+          component: ForumShow,
+        },
+        {
+          path: 'editPost',
+          name: 'forumEdit',
+          component: ForumEdit,
+        },
+        {
+          path: 'editComment',
+          name: 'commentEdit',
+          component: CommentEdit,
+        },
+      ],
+    },
   ],
 });
 
