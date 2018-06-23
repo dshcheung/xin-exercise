@@ -5,7 +5,14 @@
       <router-link to="/todo"> Todo </router-link> |
       <router-link to="/shoppingCart"> ShoppingCart </router-link> |
       <router-link to="/videos"> Videos </router-link> |
-      <router-link to="/forums"> Community Forums </router-link>
+      <router-link to="/forums"> Community Forums </router-link> |
+      <span>
+        <b-dropdown id="ddown1" text="Dropdown Button" class="m-md-2">
+          <b-dropdown-item to="/profile">Your Profile</b-dropdown-item>
+          <b-dropdown-item to="/profile/settings">Settings</b-dropdown-item>
+          <b-dropdown-item to="/">Sign Out</b-dropdown-item>
+        </b-dropdown>
+      </span>
     </div>
     <router-view></router-view>
   </div>

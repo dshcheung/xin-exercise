@@ -8,14 +8,16 @@
     <hr>
     <div class="commentShow">
       <h1 class="commentTitle"> Write a comment </h1>
+
       <forum-form :post="newComment" :onSubmit="createComment" :action="'Comment'" />
+
       <div class="commentSection"> Comments </div>
       <table class="table">
         <tbody>
-          <tr v-for="(comment, i) in comments" v-bind:key="i" v-if="(comment.postId ===post.id)">
+          <tr v-for="(comment, i) in post.comments" v-bind:key="i">
             <td>
               <div class="shiftLeft">
-                <router-link class="btn btn-default pull-right" :to="`/forums/${comment.id}/editComment`"> Edit </router-link>
+                <b-btn @click="openModal(comment)">Edit</b-btn>
                 <span class="commentAuthor">{{ comment.author }}</span> <br>
                 <span>{{ comment.content }}</span>
               </div>
@@ -24,34 +26,53 @@
         </tbody>
       </table>
     </div>
+    <comment-edit
+      :showModal="showModal"
+      :comment="editComment"
+      @close="closeModal"
+    />
   </div>
 </template>
 
 <script>
 import axios from 'axios';
 import ForumForm from './ForumForm.vue';
+import CommentEdit from './CommentEdit.vue';
 
 export default {
   name: "ForumShow",
   components: {
     'forum-form': ForumForm,
+    'comment-edit': CommentEdit,
   },
-  props: ["post", "comments"],
+  props: ["post"],
   data: function data() {
     return {
       newComment: {},
+      editComment: {},
+      showModal: false,
     };
   },
   methods: {
     createComment: function createComment() {
-      this.newComment.postId = this.post.id;
       axios({
         method: "POST",
-        data: this.newComment,
+        data: {
+          postId: this.post.id,
+          ...this.newComment,
+        },
         url: `http://localhost:3000/comments`,
-      }).then(() => {
-        this.$router.go();
+      }).then((response) => {
+        this.$emit("createComment", response.data);
       });
+    },
+    openModal: function openModal(comment) {
+      this.showModal = true;
+      this.editComment = { ...comment };
+    },
+    closeModal: function closeModal() {
+      this.showModal = false;
+      this.editComment = {};
     },
   },
 };

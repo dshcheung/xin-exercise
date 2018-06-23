@@ -10,7 +10,11 @@ import ForumNew from './views/forums/ForumNew.vue';
 import ForumShowWrapper from './views/forums/ForumShowWrapper.vue';
 import ForumShow from './views/forums/ForumShow.vue';
 import ForumEdit from './views/forums/ForumEdit.vue';
-import CommentEdit from './views/forums/CommentEdit.vue';
+import ProfileWrapper from './views/profile/ProfileWrapper.vue';
+import ProfileShow from './views/profile/ProfileShow.vue';
+import ProfileBio from './views/profile/ProfileBio.vue';
+import ProfileEdit from './views/profile/ProfileEdit.vue';
+import ProfileSettings from './views/profile/ProfileSettings.vue';
 
 Vue.use(Router);
 
@@ -65,10 +69,31 @@ export default new Router({
           name: 'forumEdit',
           component: ForumEdit,
         },
+      ],
+    },
+    {
+      path: '/profile/:id',
+      component: ProfileWrapper,
+      children: [
         {
-          path: 'editComment',
-          name: 'commentEdit',
-          component: CommentEdit,
+          path: '',
+          name: 'profileShow',
+          component: ProfileShow,
+        },
+        {
+          path: 'bio',
+          name: 'profileBio',
+          component: ProfileBio,
+        },
+        {
+          path: 'edit',
+          name: 'profileEdit',
+          component: ProfileEdit,
+        },
+        {
+          path: 'settings',
+          name: 'profileSettings',
+          component: ProfileSettings,
         },
       ],
     },
@@ -88,3 +113,8 @@ export default new Router({
 // edit
 // update
 // delete
+
+// /profile wrapper
+// /profile/:id show
+// /profile/:id bio bio
+// /profile/:id/edit edit
